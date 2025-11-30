@@ -66,5 +66,6 @@ jobs:
             #pm2 restart server.js || pm2 start server.js --name "kaleem-nodeapp"
 
             # Save PM2 so it auto-starts on reboot
+            # Save PM2 so it auto-starts on reboot
             pm2 save
-            pm2 startup systemd -u $USER --hp $HOME
+            sudo env PATH=$PATH:/usr/bin pm2 startup systemd -u $USER --hp $HOME || true
