@@ -57,7 +57,13 @@ jobs:
             fi
 
             # Start or Restart the App
-            pm2 restart server.js || pm2 start server.js --name "kaleem-nodeapp"
+            if pm2 list | grep -q "kaleem-nodeapp"; then
+              pm2 restart kaleem-nodeapp --update-env
+            else
+              pm2 start server.js --name "kaleem-nodeapp"
+            fi
+
+            #pm2 restart server.js || pm2 start server.js --name "kaleem-nodeapp"
 
             # Save PM2 so it auto-starts on reboot
             pm2 save
