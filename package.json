@@ -1,0 +1,14 @@
+{
+  "name": "muhammad-kaleem-nodeapp",
+  "version": "1.0.0",
+  "description": "Fancy Node.js DevOps Portfolio App for CI/CD Practice",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Muhammad Kaleem",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
